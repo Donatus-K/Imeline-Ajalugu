@@ -76,6 +76,9 @@
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
+    @media(max-width: 940px){
+        padding: 0 2%;
+            }
 }
 
 header {
@@ -109,6 +112,7 @@ header {
             color: #fff;
             text-shadow: -1px -1px rgba(0,0,0,.2);
             text-align: center;
+            
         }
 
         .logo{
@@ -125,9 +129,36 @@ header {
                     text-shadow: 1px 1px 1px #fff;
                     -webkit-transform: rotate(292deg);
                     -moz-transform: rotate(292deg);
+                    -ms-transform: rotate(292deg);
                     -o-transform: rotate(292deg);
+                    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
                     writing-mode: lr-tb;
+                    @media(max-width: 940px){
+                        left: -10px;
+                    }
+                    
+                    @media(max-width: 640px){
+                        top: 50px;
+                        font-size: 16px;
+                        left: 0px;
+                    }
+                    
+                    @media(max-width: 380px){
+                        top: 30px;
+                        font-size: 12px;
+                    }
                 }
+            @media(max-width: 940px){
+                padding-left: 20px;
+            }
+            
+            @media(max-width: 640px){
+                font-size: 90px;
+            }
+            
+            @media(max-width: 380px){
+                font-size: 60px;
+            }
 
         }
 }
@@ -147,7 +178,18 @@ header {
 }
 
 .panel {
-    div {
+    .collapse {
+        border-bottom: 1px solid #ffe756;
+    }
+    a {
+        display: block;
+        padding: 25px 20px;
+        font-family: 'pt_sansbold';
+        font-size: 16px;
+        text-decoration: underline;
+        color: #951c00;
+    }
+    .tab {
         border-bottom: 1px solid #ffe756;
         font-size: 24px;
         color: #3f2916;
@@ -179,9 +221,82 @@ header {
                 margin-right: 15px;
             }
     }
+    .article {
+        display: table;
+        border-bottom: 1px solid #ffe756;
+        margin: 0;
+        div {
+            border: none;
+        }
+        .checkbox-holder{
+            float: left;
+            width: 60px;
+            height: 130px;
+            line-height: 130px;
+            text-align: center;
+                input[type=checkbox] {
+                    display: none;
+                }
+                label {
+                    cursor: pointer;
+                    width: 24px;
+                    height: 24px;
+                    margin: 0 auto;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    border-radius: 2px;
+                    background-color: #efefef;
+                    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.75);
+                    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.75);
+                    box-shadow: inset 0 1px 3px rgba(0,0,0,.75);
+                }
+            
+                input[type=checkbox]:checked + label{                                                                          
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 auto;
+                        -webkit-border-radius: 2px;
+                        -moz-border-radius: 2px;
+                        border-radius: 2px;
+                        background: #fff6bf url(../images/check-mark.png) top left no-repeat;
+                        -webkit-box-shadow: inset 0 1px 4px rgba(63,41,22,.5);
+                        -moz-box-shadow: inset 0 1px 4px rgba(63,41,22,.5);
+                        box-shadow: inset 0 1px 4px rgba(63,41,22,.5);
+                        border: solid 1px #f0ce00;
+                    }
+
+        }
+        .thumbnail{
+            display: table-cell;
+            vertical-align: middle;
+            width: 120px;
+            height: 130px;
+            line-height: 130px;
+            background-color: inherit;
+        }
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+            max-width: 760px;
+            font-family: 'pt_sansregular';
+            font-size: 16px;
+            color: #222;
+            line-height: 1.5;
+                h3 {
+                    font-family: 'pt_sansbold';
+                    font-size: 16px;
+                }
+        }
+        
+        }
+        
+        .selected {
+	       background-color: #fffdef;
+        }
 }
 
 .done {
+    display: block;
     font-family: 'pt_sans_narrowbold';
 	font-size: 30px;
 	color: #e2e2e2;
@@ -215,6 +330,32 @@ header {
         background-image: -o-linear-gradient(bottom, rgba(0,0,0,.2), rgba(255,255,255,.2));
         background-image: linear-gradient(to top, rgba(0,0,0,.2), rgba(255,255,255,.2));
     }
+
+.modal-content {
+   
+
+    .modal-header {
+        border: none;
+
+            h4 {
+                font-family: 'bienetresocialbold';
+                font-size: 30px;
+                color: #3f2916;
+            }
+        
+            button {
+                font-size: 24px;
+                color: #888;
+            }
+            
+            p {
+                font-family: 'pt_sansregular';
+                font-size: 16px;
+
+            }
+    }
+}
+
 .lower-content {
     float: left;
     max-width: 560px;
